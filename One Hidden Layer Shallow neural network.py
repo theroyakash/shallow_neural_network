@@ -111,13 +111,7 @@ def compute_cost(A2, Y, parameters):
     Arguments:
     A2 -- The sigmoid output of the second activation, of shape (1, number of examples)
     Y -- "true" labels vector of shape (1, number of examples)
-    parameters -- python dictionary containing your parameters W1, b1, W2 and b2
-    [Note that the parameters argument is not used in this function, 
-    but the auto-grader currently expects this parameter.
-    Future version of this notebook will fix both the notebook 
-    and the auto-grader so that `parameters` is not needed.
-    For now, please include `parameters` in the function signature,
-    and also when invoking this function.]
+    parameters -- python dictionary containing parameters W1, b1, W2 and b2
     
     Returns:
     cost -- cross-entropy cost
@@ -132,7 +126,7 @@ def compute_cost(A2, Y, parameters):
     cost = - (1/m) * np.sum(l)
     
     cost = float(np.squeeze(cost))  # makes sure cost is the dimension we expect. 
-                                    # E.g., turns [[17]] into 17 
+                                    # for e.g., turns [[17]] into 17 
     assert(isinstance(cost, float))
     
     return cost
